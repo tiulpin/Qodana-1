@@ -55,6 +55,6 @@
     </toc-element>
 
     <toc-element toc-title="Third-Party Software and Licenses">
-        <toc-element id="qodana-teamcity-plugin-licences.md"/>
+        <toc-element id="qodana-teamcity-plugin-licences.xml"/>
     </toc-element>
 </product-profile>
