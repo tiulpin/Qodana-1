@@ -54,4 +54,7 @@
         <toc-element id="license-audit-teamcity-plugin.md"/>
     </toc-element>
 
+    <toc-element toc-title="Third-Party Software and Licenses">
+        <toc-element id="qodana-teamcity-plugin-licences.md"/>
+    </toc-element>
 </product-profile>
