@@ -5,68 +5,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        id="getting-started" title="Qodana">
 
-    <product-starting-page>
-        <title>Qodana</title>
-        <description>
-            **Qodana** is a code quality monitoring platform that allows you to evaluate the integrity of code you own, contract, or purchase.
-            It brings into your CI/CD pipelines all the smart features you love in the JetBrains IDEs plus continues adding project-level checks like clone detection and license audit (coming soon).
-        </description>
-
-        <tip-group>
-            <a href="qodana-at-a-glance.md"
-               description="Qodana at a glance" type="start">Qodana at a glance</a>
-            <a href="supported-technologies.md" type="install" description="Qodana lets you analyse Java, Kotlin, and PHP projects"/>
-        </tip-group>
-
-
-        <articles-group>
-            <title>Qodana Docker Images</title>
-            <a href="qodana-intellij-docker-readme.md"
-               description="Qodana IntelliJ Docker Image"/>
-            <a href="clone-finder-docker-readme.md"
-               description="Qodana Clone Finder Docker Image"/>
-            <a href="license-audit-docker-readme.md"
-               description="Qodana License Audit Docker Image"/>
-        </articles-group>
-
-        <tutorials-group>
-            <title>Configure Qodana</title>
-            <a href="qodana-yaml.md"
-               description="Qodana runs are configured via the `qodana.yaml` file. Information stored in `qodana.yaml` overrides the default inspection profile settings and default configurations of Qodana linters."/>
-        </tutorials-group>
-
-        <articles-group>
-            <title>Qodana Inspection Results</title>
-            <a href="qodana-intellij-output.md"
-               description="Qodana IntelliJ Output"/>
-            <a href="clone-finder-output.md"
-               description="Qodana Clone Finder Output"/>
-            <a href="license-audit-output.md"
-               description="Qodana License Audit Output"/>
-        </articles-group>
-
-        <articles-group>
-            <title>Use Qodana on GitHub</title>
-            <a href="qodana-intellij-github-action.md"
-               description="Qodana IntelliJ GitHub Action"/>
-            <a href="qodana-intellij-github-application.md"
-               description="Qodana IntelliJ GitHub Application"/>
-            <a href="clone-finder-github-action.md"
-               description="Qodana Clone Finder GitHub Action"/>
-            <a href="license-audit-github-action.md"
-               description="Qodana License Audit GitHub Action"/>
-        </articles-group>
-
-        <links-group>
-            <title>Qodana Plugins</title>
-            <a href="qodana-teamcity-plugin.md"
-               description="Qodana TeamCity Plugin"/>
-            <a href="clone-finder-teamcity-plugin.md"
-               description="Clone Finder TeamCity Plugin"/>
-            <a href="license-audit-teamcity-plugin.md"
-               description="License Audit TeamCity Plugin"/>
-        </links-group>
-
-    </product-starting-page>
+    <p>
+        Test
+    </p>
 
 </topic>
