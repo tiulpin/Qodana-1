@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE product-profile
         SYSTEM "https://resources.jetbrains.com/stardust/product-profile.dtd">
-<product-profile id="qd" name="Qodana" start-page="getting-started.md" status="release">
+<product-profile id="qd" name="Qodana" start-page="getting-started.xml" status="release">
 
-    <toc-element id="getting-started.md" toc-title="Getting Started">
+    <toc-element id="getting-started.xml" toc-title="Getting Started">
+        <toc-element id="getting-started.md" toc-title="Qodana at a glance"/>
         <toc-element id="supported-technologies.md"/>
         <toc-element id="qodana-yaml.md"/>
         <toc-element id="qodana-slack-code-of-conduct.md"/>
