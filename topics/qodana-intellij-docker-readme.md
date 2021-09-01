@@ -4,7 +4,7 @@
 
 ><include src="lib_qd.xml" include-id="eap-warning"/>
 
-Supported tags: [`2020.3-eap`](https://hub.docker.com/r/jetbrains/qodana/tags?page=1&ordering=last_updated&name=2020.3-eap), [`2021.1-eap`](https://hub.docker.com/r/jetbrains/qodana/tags?page=1&ordering=last_updated&name=2021.1-eap),  [`latest`](https://hub.docker.com/r/jetbrains/qodana/tags?page=1&ordering=last_updated&name=latest) (points to `2021.1-eap`)
+Supported tags: [`2020.3-eap`](https://hub.docker.com/r/jetbrains/qodana/tags?page=1&ordering=last_updated&name=2020.3-eap), [`2021.1-eap`](https://hub.docker.com/r/jetbrains/qodana/tags?page=1&ordering=last_updated&name=2021.1-eap),  [`latest`](https://hub.docker.com/r/jetbrains/qodana/tags?page=1&ordering=last_updated&name=latest) (points to `2021.2-eap`)
 
 We provide a Docker image for the [Qodana IntelliJ linter](about-qodana-intellij.md) to support different usage scenarios:
 - Running the analysis on a regular basis as part of your continuous integration (*CI-based execution*)
@@ -20,6 +20,9 @@ results of the most common checks performed on your code base. Later, you can [a
 {id="quick-start-recommended-profile"}
 
 ### Run analysis locally
+<note>
+<include src="lib_qd.xml" include-id="docker-ram-note"/>
+</note>
 
 1) Pull the image from Docker Hub (only necessary to update to the `latest` version):
 
@@ -111,7 +114,7 @@ If you run the analysis several times in a row, make sure you've cleaned the res
 
 This section is intended for users familiar with configuring code analysis via [IntelliJ inspection profiles](https://www.jetbrains.com/help/idea/customizing-profiles.html).
 
-You can pass the reference to the existing profile in [multiple ways](https://github.com/JetBrains/Qodana/blob/main/Docker/techs.md#order-of-resolving-profile). Here are some examples:
+You can pass the reference to the existing profile in [multiple ways](qodana-intellij-docker-techs.md#Order+of+resolving+a+profile). Here are some examples:
 
 - Mapping the profile to `/data/profile.xml` inside the container:
 
