@@ -4,7 +4,7 @@
 <product-profile id="qd" name="Qodana" start-page="getting-started.xml" status="release">
 
     <toc-element id="getting-started.xml" toc-title="Getting Started">
-        <toc-element id="getting-started.md" toc-title="Qodana at a glance"/>
+        <toc-element id="qodana-at-a-glance.md" toc-title="Qodana at a glance"/>
         <toc-element id="supported-technologies.md"/>
         <toc-element id="qodana-yaml.md"/>
         <toc-element id="qodana-slack-code-of-conduct.md"/>

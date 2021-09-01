@@ -13,7 +13,7 @@
         </description>
 
         <tip-group>
-            <a href="getting-started.md"
+            <a href="qodana-at-a-glance.md"
                description="Qodana at a glance" type="start">Qodana at a glance</a>
             <a href="supported-technologies.md" type="install" description="Qodana lets you analyse Java, Kotlin, and PHP projects"/>
         </tip-group>
