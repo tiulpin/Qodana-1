@@ -4,7 +4,6 @@
 <product-profile id="qd" name="Qodana" start-page="getting-started.xml" status="release">
 
     <toc-element id="Some_Topic.md"/>
-    <toc-element id="Some_Topic.xml"/>
 
     <toc-element id="getting-started.xml" toc-title="Getting Started">
         <toc-element id="qodana-at-a-glance.md" toc-title="Qodana at a glance"/>
@@ -13,6 +12,8 @@
         <toc-element id="qodana-slack-code-of-conduct.md"/>
         <toc-element id="CHANGELOG.md"/>
     </toc-element>
+
+    <toc-element id="Some_Topic.xml"/>
 
     <toc-element id="linters.md">
          <toc-element id="about-qodana-intellij.md" accepts-web-file-names="about-qodana.html"/>
