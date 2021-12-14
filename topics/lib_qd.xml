@@ -290,19 +290,30 @@
                 <td>
                     <code>/data/results</code>
                 </td>
-                <td>Directory to store the analysis results, needs to be empty before running %linter%</td>
+                <td>Directory to store the analysis results, needs to be empty before running a %product% linter</td>
             </tr>
             <tr>
                 <td>
                     <code>/root/.config/idea</code>
                 </td>
-                <td>%ide% configuration directory</td>
+                <!-- This needs to be finished -->
+                <!-- This list can be unified to be used throughout the entire reference manual, with a small introduction and an anchor to this -->
+                <!-- Some sort of prerequisites may be required here-->
+                <td><p>Configuration directory for the IDE:</p>
+                <list>
+                    <li>IntelliJ IDEA for </li>
+                    <li>PhpStorm for</li>
+                    <li>PyCharm for </li>
+                    <li>WebStorm for </li>
+                </list>
+
+                </td>
             </tr>
             <tr>
                 <td>
                     <code>/opt/idea</code>
                 </td>
-                <td>Directory of the %ide% distributive</td>
+                <td>Directory of the IDE distributive</td>
             </tr>
             <tr>
                 <td>
@@ -316,7 +327,7 @@
 
     <chunk id="docker-config-options">
         <p>
-            The following arguments are available for the <code>jetbrains/%linter-shell%</code> command.
+            The following arguments are available for the <code>jetbrains/qodana-&lt;linter&gt;</code> command.
         </p>
         <table column-width="fixed">
             <tr>
@@ -364,10 +375,11 @@
                 <td>Serve HTML report on port 8080</td>
             </tr>
             <tr>
+                <!-- The -b option needs to be tested. I am not sure it exists. If it works the same, so it needs to be added to the Baseline feature description -->
                 <td><code>-b</code>,
                     <code>--baseline</code>
                 </td>
-                <td>Run <a anchor="Run+in+baseline+mode">in baseline mode</a>. Provide the path to an existing SARIF
+                <td>Run <a href="qodana-baseline.xml">in the baseline mode</a>. Provide the path to an existing SARIF
                     report to be used in the baseline state calculation.
                 </td>
             </tr>
@@ -375,6 +387,7 @@
                 <td>
                     <code>--baseline-include-absent</code>
                 </td>
+                <!-- This may be referenced to the Baseline feature too -->
                 <td>Include in the output report the results from the baseline run that are absent in the current run
                 </td>
             </tr>
@@ -382,6 +395,7 @@
                 <td>
                     <code>--fail-threshold</code>
                 </td>
+                <!-- Check whether the punctuation marks here are correct -->
                 <td>Set the number of problems that will serve as a quality gate. If this number is reached, the
                     inspection run is terminated.
                 </td>
@@ -421,10 +435,11 @@
         </table>
     </chunk>
 
+    <!-- This needs to be improved -->
     <chunk id="inspection-profile-name-note">
         Note that the name of the profile does not necessarily
         match the name of the containing file stored in <code>.idea/inspectionProfiles</code>. The actual
-        name is stored as the <code>&lt;option name="myName" value="%\profileName%" /&gt;</code> value in the profile <code>xml</code> file and is visible in the %ide% UI. For details on
+        name is stored as the <code>&lt;option name="myName" value="%\profileName%" /&gt;</code> value in the profile <code>xml</code> file and is visible in the IDE user interface. For details on
         working with inspection profiles in %ide%, see the <a
             href="%code-inspection-profiles-ide-help-url%">%ide% documentation</a>.
     </chunk>
@@ -442,7 +457,7 @@
 
     <chunk id="docker-config-save-report">
         <code style="block" lang="shell">
-            docker run ... jetbrains/%linter-shell% --save-report
+            docker run ... jetbrains/qodana-&lt;linter&gt; --save-report
         </code>
         <p>By default, the HTML report is stored in a separate <code>report/</code> subdirectory under the <code>
             results
@@ -452,8 +467,9 @@
 
     <chunk id="docker-config-display-report">
         <code style="block" lang="shell">
-            docker run ... -p 8080:8080 jetbrains/%linter-shell% --show-report
+            docker run ... -p 8080:8080 jetbrains/qodana-&lt;linter&gt; --show-report
         </code>
+        <!-- This needs to be improved regarding the articles -->
         <p>After the inspection is finished, the container will not exit and will listen on port <code>8080</code>.
             You can connect to <code>http://localhost:8080</code> to see the results. To stop the web server, press <shortcut>Ctrl-C</shortcut> in the Docker console.
         </p>
@@ -461,25 +477,25 @@
 
     <chunk id="docker-config-change-heap-size">
         <code style="block" lang="shell">
-            docker run ... -e _JAVA_OPTIONS=-Xmx6g jetbrains/%linter-shell%
+            docker run ... -e _JAVA_OPTIONS=-Xmx6g jetbrains/qodana-&lt;linter&gt;
         </code>
         <p>By default, Heap size is set to 80% of the host RAM.</p>
     </chunk>
 
     <chunk id="docker-config-log-info-to-stdout">
-        <code style="block" lang="shell">docker run ... jetbrains/%linter-shell% --property=idea.log.config.file=info.xml
+        <code style="block" lang="shell">docker run ... jetbrains/qodana-&lt;linter&gt; --property=idea.log.config.file=info.xml
         </code>
         <p>The default log level for STDOUT is <code>WARN</code>.
         </p>
     </chunk>
 
     <chunk id="docker-config-modify-gradle-settings">
-        <code style="block" lang="shell"> docker run ... -v &lt;source-directory&gt;/gradle.properties:/root/.gradle/gradle.properties jetbrains/%linter-shell%
+        <code style="block" lang="shell"> docker run ... -v &lt;source-directory&gt;/gradle.properties:/root/.gradle/gradle.properties jetbrains/qodana-&lt;linter&gt;
         </code>
     </chunk>
 
     <chunk id="docker-config-different-properties-file">
-        <code style="block" lang="shell"> docker run ... -e IDEA_PROPERTIES=/data/project/idea.properties jetbrains/%linter-shell%
+        <code style="block" lang="shell"> docker run ... -e IDEA_PROPERTIES=/data/project/idea.properties jetbrains/qodana-&lt;linter&gt;
         </code>
     </chunk>
 
