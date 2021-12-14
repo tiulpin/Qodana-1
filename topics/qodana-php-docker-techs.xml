@@ -12,6 +12,10 @@
     <var name="docker-general-guide-page-url" value="qodana-php-docker-readme.xml"/>
     <var name="code-inspection-profiles-ide-help-url" value="https://www.jetbrains.com/help/phpstorm/?Customizing_Profiles"/>
 
+    <chapter id="Docker+ide+intro" title="Introduction">
+        <include src="lib_qd.xml" include-id="docker-config-ide-list" />
+    </chapter>
+
     <chapter id="Docker+image+paths" title="Docker image paths">
 
         <include src="lib_qd.xml" include-id="docker-config-image-paths"/>
@@ -107,7 +111,7 @@
 
     </chapter>
 
-    <chapter id="Order+of+resolving+a+profile" title="Order of resolving a profile">
+    <chapter id="Order+of+resolving+a+profile" title="Order of profile resolving">
 
         <include src="lib_qd.xml" include-id="docker-config-profile-resolving"/>
 
