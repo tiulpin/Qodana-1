@@ -110,14 +110,14 @@
                 <td><code>-r</code>,
                     <code>--report-dir=</code>
                 </td>
-                <td>Save HTML report to folder (default: <code>/data/results/report</code>)
+                <td>Directory to save an HTML report to (default: <code>/data/results/report</code>).
                 </td>
             </tr>
             <tr>
                 <td>
                     <code>--cache-dir=</code>
                 </td>
-                <td>Set cache folder (default: <code>/data/cache</code>)
+                <td>Cache directory (default: <code>/data/cache</code>)
                 </td>
             </tr>
             <tr>
@@ -202,13 +202,13 @@
                 </tr>
                 <tr>
                     <td><code>--disable-sanity</code></td>
-                    <td>Skip running the inspections configured by the <emphasis>sanity</emphasis> profile (default: enabled).</td>
+                    <td>Skip running the inspections configured by the <code>sanity</code> profile (default: enabled).</td>
                 </tr>
                 <tr>
                     <td><code>-n</code>,
                         <code>--profile-name</code>
                     </td>
-                    <td>Name of a profile defined the in project. Note that the name of the profile does not necessarily
+                    <td>Profile name defined the in project. Note that this name does not necessarily
                         match the name of the containing file stored in <code>.idea/inspectionProfiles</code>. The actual
                         name is stored as the <code>&lt;option name="myName" value="%\profileName%" /&gt;</code> value in the
                         profile <code>xml</code> file and is visible in the IDE user interface.
@@ -233,7 +233,8 @@
                         <code>-t</code>,
                         <code>--stub-profile</code>
                     </td>
-                    <td>Path to the fallback profile to be used if the profile was not specified using any available options.
+                    <td>Path to the fallback profile file. This option be applied in case the profile was not specified using
+                        any available options.
                     </td>
                 </tr>
             </table>
@@ -260,7 +261,8 @@
                 </tr>
                 <tr>
                     <td><code>--property=</code></td>
-                    <td>Set a Java property. This option can be repeated multiple times for multiple Java properties. </td>
+                    <td>Set a Java property to be used while running %product%. This option can be repeated multiple
+                        times for setting multiple Java properties. </td>
                 </tr>
                 <tr>
                     <td>
