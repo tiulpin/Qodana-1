@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/stardust/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Quality gate"
+       id="quality-gate.xml">
+
+    <p>This section covers the following cases of setting the quality gate feature:</p>
+    <list>
+        <li>Local run using the CLI command</li>
+        <li>Running using GitHub actions</li>
+        <li>Running using Jenkins</li>
+        <li>Running using Gitlab CI</li>
+    </list>
+
+    <chapter id="quality-gate-local-run" title="Local run">
+        <!-- This needs to be modified though, and excluded from here -->
+        <include src="lib_qd.xml" include-id="docker-local-analysis"/>
+
+    </chapter>
+
+
+</topic>
