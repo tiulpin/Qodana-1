@@ -6,6 +6,14 @@
        title="Quality gate"
        id="quality-gate.xml">
 
+
+    <!-- I need to find out if the threshold problem still makes Qodana run, or is it stopped -->
+
+    <p>Quality gate is the number of codebase problems that serves as a threshold. One the threshold amount of problems
+        is detected, %product% terminates the build in a CI/CD pipeline. </p>
+
+    <img src="quality-gate.png" dark-src="quality-gate.png" width="706" alt="Quality gate diagram"/>
+
     <p>This section covers the following cases of setting the quality gate feature:</p>
     <list>
         <li>Local run using the CLI command</li>
@@ -15,8 +23,35 @@
     </list>
 
     <chapter id="quality-gate-local-run" title="Local run">
-        <!-- This needs to be modified though, and excluded from here -->
-        <include src="lib_qd.xml" include-id="docker-local-analysis"/>
+        <!-- This needs to be rephrased -->
+        <p>Although local %product% run implies it being outside a CI/CD pipeline, this example better demonstrates how
+            to configure the quality gate feature.</p>
+
+                <p>Run the following CLI command:</p>
+                <code style="block" lang="shell">
+                    docker run --rm -it -p 8080:8080 \
+                    -v &lt;source-directory&gt;/:/data/project/ \
+                    -v &lt;output-directory&gt;/:/data/results/ \
+                    jetbrains/%linter-shell% --show-report
+                </code>
+                <p>
+                    where <code>source-directory</code> and <code>output-directory</code> are full local paths to,
+                    respectively, the project source code directory and the analysis results directory.
+                </p>
+
+    <chapter id="quality-gate-github-actions" title="GitHub Actions">
+
+    </chapter>
+
+    <chapter id="quality-gate-jenkins" title="Jenkins">
+
+    </chapter>
+
+    <chapter id="quality-gate-gitlab-ci" title="GitLab CI">
+
+
+    </chapter>
+
 
     </chapter>
 
