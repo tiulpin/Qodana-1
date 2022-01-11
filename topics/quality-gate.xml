@@ -41,6 +41,34 @@
 
     <chapter id="quality-gate-github-actions" title="GitHub Actions">
 
+        <p>You can enforce GitHub to block the merge of pull requests if the Qodana quality gate has failed. To do it, create a
+            branch protection rule as described below:</p>
+
+        <procedure>
+            <step>Create new or open an existing GitHub workflow with the Qodana Action specified.</step>
+            <step><p>Set the workflow to run on <emphasis>pull_request</emphasis> events that target the
+                <emphasis>main</emphasis> branch.</p>
+                <code style="block" lang="yaml">
+                    on:
+                    pull_request:
+                    branches:
+                    - main
+                </code>
+                <p>Instead of <emphasis>main</emphasis>, you can specify your branch here. </p>
+            </step>
+            <step>Set <emphasis>1</emphasis> for the Qodana Action <emphasis>fail-threshold</emphasis> option.</step>
+            <step>Under your repository name, click <menupath>Settings</menupath>.</step>
+            <step>On the left menu, click <menupath>Branches</menupath>.</step>
+            <step>In the branch protection rules section, click <menupath>Add rule</menupath>.</step>
+            <step>Add <emphasis>main</emphasis> to <menupath>Branch name pattern</menupath>.</step>
+            <step>Select <menupath>Require status checks to pass before merging</menupath>.</step>
+            <step>Search for the <emphasis>Qodana</emphasis> status check, then check it.</step>
+            <step>Click <menupath>Create</menupath>.</step>
+        </procedure>
+
+        <p>For more information about branch protection rules, refer to the original
+            <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule">GitHub Documentation</a>.</p>
+
     </chapter>
 
     <chapter id="quality-gate-jenkins" title="Jenkins">
