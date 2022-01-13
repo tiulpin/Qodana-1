@@ -5,3 +5,4 @@ include:
   - name: GrazieInspection
   - name: IdentifierGrammar
   - name: LanguageDetectionInspection
+  - name: SpellCheckingInspection
